@@ -1,0 +1,21 @@
+﻿<bug:BaseMainWindow
+    x:Class="BindWithValidationBug.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:bug="clr-namespace:BindWithValidationBug"
+    mc:Ignorable="d"
+    Title="MainWindow" Height="360" Width="640">
+    <StackPanel>
+        <TextBox
+            x:Name="TextBox"
+            Margin="16" />
+
+        <ComboBox
+            x:Name="ComboBox"
+            DisplayMemberPath="Name"
+            SelectedValuePath="Value"
+            Margin="16" />
+    </StackPanel>
+</bug:BaseMainWindow>
