@@ -1,4 +1,6 @@
-﻿using System.Windows;
+﻿using ReactiveUI.Builder;
+
+using System.Windows;
 
 namespace BindWithValidationBug;
 
@@ -7,4 +9,12 @@ namespace BindWithValidationBug;
 /// </summary>
 public partial class App : Application
 {
+    protected override void OnStartup(StartupEventArgs e)
+    {
+        base.OnStartup(e);
+
+        RxAppBuilder.CreateReactiveUIBuilder()
+            .WithWpf()
+            .BuildApp();
+    }
 }

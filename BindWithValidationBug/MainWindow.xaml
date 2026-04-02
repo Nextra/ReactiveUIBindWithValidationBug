@@ -17,5 +17,9 @@
             DisplayMemberPath="Name"
             SelectedValuePath="Value"
             Margin="16" />
+
+        <Border BorderBrush="DarkGray" BorderThickness="1" Margin="16">
+            <TextBlock x:Name="TextBlock" />
+        </Border>
     </StackPanel>
 </bug:BaseMainWindow>

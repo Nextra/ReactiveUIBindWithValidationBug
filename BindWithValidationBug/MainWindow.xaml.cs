@@ -18,6 +18,7 @@ public partial class MainWindow : BaseMainWindow
     void WhenActivated(Action<IDisposable> d)
     {
         d(this.OneWayBind(ViewModel, (vm) => vm.Items, (v) => v.ComboBox.ItemsSource));
+        d(this.OneWayBind(ViewModel, (vm) => vm.SelectedValue, (v) => v.TextBlock.Text));
 
         // Works
         d(this.BindWithValidation(ViewModel, (vm) => vm.SelectedValue, (v) => v.TextBox.Text));
